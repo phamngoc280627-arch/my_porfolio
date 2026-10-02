@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phạm Thị Thanh Ngọc 🌸 Gia Sư Toán • Dreamy Kawaii Portfolio</title>
+  <meta name="description" content="Portfolio của Phạm Thị Thanh Ngọc - Gia sư Toán tận tâm, sinh viên Đại học Ngoại Thương, 28 điểm THPTQG 2025 (10 Lý, 9.5 Toán). Dạy kèm học sinh lớp 7-11 Online & Offline tại Hà Nội.">
+  <meta name="keywords" content="Phạm Thị Thanh Ngọc, Gia sư Toán, Gia sư Hà Nội, Ngoại Thương FTU, Gia sư lớp 8 9 10 11, portfolio">
+  <meta name="author" content="Phạm Thị Thanh Ngọc">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Phạm Thị Thanh Ngọc 🌸 Gia Sư Toán • Dreamy Kawaii Portfolio">
+  <meta property="og:description" content="Gia sư Toán tận tâm • 28 điểm THPTQG (10 Lý, 9.5 Toán) • Sinh viên ĐH Ngoại Thương.">
+  <meta property="og:image" content="assets/images/profile_ngoc.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Animated Canvas (Iridescent Bubbles, Floating Petals & Twinkle Stars) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Interactive Ripple Container -->
+  <div id="ripple-container"></div>
+
+  <!-- Sweet Toast Notification -->
+  <div id="sweet-toast" class="sweet-toast" role="alert" aria-live="polite">
+    <span>🌸</span>
+    <span id="toast-message">Đã sao chép vào clipboard!</span>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top-btn" class="back-to-top-btn" aria-label="Lên đầu trang" title="Lên đầu trang">
+    🫧
+  </button>
+
+  <!-- ==========================================================================
+       SITE HEADER / FLOATING BUBBLE NAVIGATION
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-container" aria-label="Điều hướng chính">
+        <a href="#hero" class="nav-brand">
+          <img src="assets/images/profile_ngoc.png" alt="Phạm Thị Thanh Ngọc" class="nav-avatar-mini">
+          <div class="nav-brand-text">
+            <span class="nav-name">Thanh Ngọc</span>
+            <span class="nav-title">Gia sư Toán • FTU 🌸</span>
+          </div>
+        </a>
+
+        <!-- Desktop & Mobile Links -->
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#hero" class="active">Khu Vườn</a></li>
+          <li class="nav-item"><a href="#about">Giới Thiệu</a></li>
+          <li class="nav-item"><a href="#achievements">Thành Tích</a></li>
+          <li class="nav-item"><a href="#experience">Kinh Nghiệm</a></li>
+          <li class="nav-item"><a href="#format">Hình Thức</a></li>
+          <li class="nav-item"><a href="#skills">Kỹ Năng</a></li>
+          <li class="nav-item"><a href="#contact">Liên Hệ</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Web Audio Sound Toggle -->
+          <button id="sound-toggle-btn" class="sound-toggle-btn" aria-label="Bật/Tắt âm thanh bong bóng" title="Âm thanh dễ thương">
+            🔔
+          </button>
+
+          <!-- Quick CV Lightbox Trigger -->
+          <button class="squishy-bubble bubble-primary nav-cta-btn open-cv-btn" id="nav-cv-btn">
+            <span>Xem CV ✨</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button class="mobile-menu-btn" aria-label="Mở menu" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         CHAPTER 1: HERO / OPENING SCENE
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <!-- Soft Swirling Dreamy Ambient Background -->
+      <div class="hero-vortex-bg"></div>
+
+      <!-- Twinkling Stars in Hero -->
+      <div class="decor-star star-1">✨</div>
+      <div class="decor-star star-2">⭐</div>
+      <div class="decor-star star-3">🌸</div>
+
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content reveal-fade-up">
+            <div class="hero-status-pill">
+              <span class="status-dot-pulse"></span>
+              <span>Đang mở lớp học mới • Nhận dạy kèm 1-1 & nhóm nhỏ</span>
+            </div>
+
+            <h1 class="hero-title">
+              Xin chào, mình là <br>
+              <span class="name-highlight">Phạm Thị Thanh Ngọc</span>
+            </h1>
+
+            <div class="hero-subtitle-box">
+              <span>🌸</span>
+              <span id="typing-text">Gia sư Toán tận tâm</span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <p class="hero-desc">
+              Chào mừng bạn đến với khu vườn toán học nhỏ của mình! Mình tin rằng môn Toán không hề khô khan, mà luôn ẩn chứa vẻ đẹp của sự logic và tư duy sáng tạo khi bạn tìm được phương pháp tiếp cận phù hợp.
+            </p>
+
+            <!-- Key Fact Badges from CV -->
+            <div class="hero-key-badges">
+              <div class="key-badge">
+                <span class="badge-icon">🌟</span>
+                <span>28 Điểm THPTQG 2025</span>
+              </div>
+              <div class="key-badge">
+                <span class="badge-icon">💯</span>
+                <span>10 Vật Lý • 9.5 Toán</span>
+              </div>
+              <div class="key-badge">
+                <span class="badge-icon">🎓</span>
+                <span>Đại học Ngoại Thương (FTU)</span>
+              </div>
+              <div class="key-badge">
+                <span class="badge-icon">📍</span>
+                <span>Hà Nội (Khâm Thiên, Đống Đa)</span>
+              </div>
+            </div>
+
+            <!-- CTAs with Squishy Bubble Interactions -->
+            <div class="hero-cta-group">
+              <a href="#about" class="squishy-bubble bubble-primary" id="hero-explore-btn">
+                <span>Khám Phá Hành Trình 🌸</span>
+              </a>
+              <button class="squishy-bubble bubble-gold open-cv-btn" id="hero-cv-btn">
+                <span>Xem Hồ Sơ CV 📄</span>
+              </button>
+              <a href="#contact" class="squishy-bubble bubble-outline" id="hero-contact-btn">
+                <span>Nhận Tư Vấn 💌</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Storybook Avatar Frame with Floating Lilies & Mushroom Bunny -->
+          <div class="hero-visual reveal-fade-up">
+            <div class="avatar-storybook-frame">
+
+              <!-- Floating Corner Lily Flower -->
+              <img src="assets/images/flower_lily.png" alt="Hoa Lily hồng" class="floating-avatar-lily">
+
+              <div class="avatar-image-wrapper">
+                <img src="assets/images/profile_ngoc.png" alt="Phạm Thị Thanh Ngọc - Gia sư Toán" class="avatar-real-img">
+              </div>
+
+              <!-- Cute Mushroom Bunny Companion -->
+              <div class="hero-companion-bunny" id="hero-bunny" title="Nhấn vào tớ để trò chuyện nè!">
+                <div class="companion-speech-bubble" id="bunny-speech">
+                  Cùng học Toán nhé! 🌸
+                </div>
+                <img src="assets/images/char_mushroom_bunny.png" alt="Bé thỏ nấm kawaii" style="width: 100%; height: auto;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lily Flower Divider Transition -->
+    <div class="section-garden-divider">
+      <div class="garden-blooms-row">
+        <img src="assets/images/flower_lily.png" alt="lily" class="mini-lily">
+        <img src="assets/images/flower_lily.png" alt="lily" class="mini-lily">
+        <img src="assets/images/flower_lily.png" alt="lily" class="mini-lily">
+        <img src="assets/images/flower_lily.png" alt="lily" class="mini-lily">
+        <img src="assets/images/flower_lily.png" alt="lily" class="mini-lily">
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         CHAPTER 2: ABOUT ME
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        
+        <div class="text-center reveal-fade-up">
+          <div class="story-chapter-tag">
+            <span class="chapter-icon">📖</span>
+            <span>Chương I • Câu Chuyện Của Ngọc</span>
+          </div>
+          <h2 class="section-title">Giới Thiệu <span class="highlight">Bản Thân</span></h2>
+          <p class="section-subtitle">Một chút chia sẻ về chặng đường học tập, đam mê toán học và triết lý giảng dạy của mình.</p>
+        </div>
+
+        <div class="storybook-card reveal-fade-up">
+          <div class="storybook-grid">
+            
+            <!-- Visual Column with Cute Princess Kitty -->
+            <div class="about-visual-col">
+              <div class="about-photo-card">
+                <img src="assets/images/profile_ngoc.png" alt="Phạm Thị Thanh Ngọc">
+              </div>
+              <!-- Princess Kitten Companion -->
+              <div class="about-floating-companion" title="Bé mèo công chúa">
+                <img src="assets/images/char_princess_kitten.png" alt="Bé mèo váy xanh" style="width: 100%; height: auto;">
+              </div>
+            </div>
+
+            <!-- Information Column with Accurate CV Facts -->
+            <div class="about-info-col">
+              <p class="about-bio-text">
+                Chào các bậc phụ huynh và các em học sinh! Mình là <strong>Phạm Thị Thanh Ngọc</strong>, hiện đang là sinh viên tại <strong>Trường Đại học Ngoại Thương (FTU)</strong>. Với nền tảng kiến thức tự nhiên vững vàng và thành tích đạt <strong>28 điểm trong kỳ thi THPT Quốc Gia 2025</strong> (trong đó đạt <strong>10 điểm tuyệt đối môn Vật lý</strong> và <strong>9.5 điểm môn Toán</strong>), mình mong muốn đồng hành và truyền cảm hứng học tập đến các em học sinh.
+              </p>
+
+              <!-- CV Facts Grid -->
+              <div class="cv-facts-grid">
+                
+                <div class="cv-fact-card">
+                  <div class="fact-icon-wrap">🎂</div>
+                  <div class="fact-content">
+                    <span class="fact-label">Năm sinh</span>
+                    <span class="fact-value">2007</span>
+                  </div>
+                </div>
+
+                <div class="cv-fact-card">
+                  <div class="fact-icon-wrap">🏫</div>
+                  <div class="fact-content">
+                    <span class="fact-label">Trường theo học</span>
+                    <span class="fact-value">ĐH Ngoại Thương (FTU)</span>
+                  </div>
+                </div>
+
+                <div class="cv-fact-card">
+                  <div class="fact-icon-wrap">📍</div>
+                  <div class="fact-content">
+                    <span class="fact-label">Khu vực dạy</span>
+                    <span class="fact-value">Khâm Thiên, Đống Đa, HN</span>
+                  </div>
+                </div>
+
+                <div class="cv-fact-card">
+                  <div class="fact-icon-wrap">📞</div>
+                  <div class="fact-content">
+                    <span class="fact-label">Số điện thoại</span>
+                    <span class="fact-value">0818132028</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Teaching Philosophy -->
+              <div class="philosophy-card">
+                <p>
+                  "Mục tiêu của mình trong mỗi buổi học không chỉ là giúp các em giải được bài tập trên lớp, mà là xây dựng nền tảng tư duy vững chắc, rèn luyện sự cẩn thận và thắp lên niềm tin vào chính năng lực của bản thân mình."
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 3: EDUCATION & ACHIEVEMENTS
+         ========================================================================== -->
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        
+        <div class="text-center reveal-fade-up">
+          <div class="story-chapter-tag">
+            <span class="chapter-icon">⭐</span>
+            <span>Chương II • Những Vì Sao Thành Tích</span>
+          </div>
+          <h2 class="section-title">Học Tập & <span class="highlight">Giải Thưởng</span></h2>
+          <p class="section-subtitle">Từng nỗ lực và dấu mốc quan trọng được chứng minh qua các kỳ thi chọn học sinh giỏi và kỳ thi THPT Quốc Gia.</p>
+        </div>
+
+        <div class="achievements-timeline">
+          
+          <!-- Milestone 1: 28 THPTQG -->
+          <div class="milestone-item reveal-fade-up">
+            <div class="milestone-card">
+              <span class="milestone-badge-top badge-national">🏆 Kỳ Thi THPTQG 2025</span>
+              <h3 class="milestone-title">28 Điểm Kỳ Thi THPTQG 2025</h3>
+              <p class="milestone-desc">
+                Đạt <strong>10 điểm tuyệt đối môn Vật lý</strong> và <strong>9.5 điểm môn Toán</strong>. Đây là minh chứng rõ nét cho năng lực tư duy khoa học tự nhiên chính xác và khả năng xử lý bài toán vận dụng cao.
+              </p>
+            </div>
+            <div class="milestone-node">💯</div>
+          </div>
+
+          <!-- Milestone 2: FTU -->
+          <div class="milestone-item reveal-fade-up">
+            <div class="milestone-card">
+              <span class="milestone-badge-top badge-university">🎓 Đại Học Danh Giá</span>
+              <h3 class="milestone-title">Trường Đại học Ngoại Thương</h3>
+              <p class="milestone-desc">
+                Trúng tuyển và theo học tại ngôi trường đại học hàng đầu về kinh tế và tư duy đổi mới sáng tạo tại Việt Nam.
+              </p>
+            </div>
+            <div class="milestone-node">🏫</div>
+          </div>
+
+          <!-- Milestone 3: HSG Toán Tỉnh 12 -->
+          <div class="milestone-item reveal-fade-up">
+            <div class="milestone-card">
+              <span class="milestone-badge-top badge-provincial">🥈 Giải Tỉnh Lớp 12</span>
+              <h3 class="milestone-title">Giải Ba Học Sinh Giỏi Toán Cấp Tỉnh 12</h3>
+              <p class="milestone-desc">
+                Ghi dấu ấn trong kỳ thi chọn học sinh giỏi cấp tỉnh năm học cuối cấp, khẳng định chuyên môn toán học nâng cao.
+              </p>
+            </div>
+            <div class="milestone-node">🥉</div>
+          </div>
+
+          <!-- Milestone 4: HSG Toán Tiếng Anh Tỉnh 11 -->
+          <div class="milestone-item reveal-fade-up">
+            <div class="milestone-card">
+              <span class="milestone-badge-top badge-provincial">🌟 Năng Lực Song Ngữ</span>
+              <h3 class="milestone-title">Giải Nhì Học Sinh Giỏi Toán Tiếng Anh Cấp Tỉnh 11</h3>
+              <p class="milestone-desc">
+                Đạt giải Nhì cấp tỉnh trong kỳ thi Toán bằng Tiếng Anh, kết hợp tư duy logic sắc bén và khả năng ngoại ngữ tốt.
+              </p>
+            </div>
+            <div class="milestone-node">🥈</div>
+          </div>
+
+          <!-- Milestone 5: HSG Hóa Huyện 9 -->
+          <div class="milestone-item reveal-fade-up">
+            <div class="milestone-card">
+              <span class="milestone-badge-top badge-district">🧪 Khoa Học Tự Nhiên</span>
+              <h3 class="milestone-title">Giải Ba Học Sinh Giỏi Môn Hóa Cấp Huyện 9</h3>
+              <p class="milestone-desc">
+                Đạt giải Ba học sinh giỏi cấp huyện môn Hóa học năm lớp 9, thể hiện nền tảng vững vàng trong các môn tự nhiên.
+              </p>
+            </div>
+            <div class="milestone-node">🥉</div>
+          </div>
+
+          <!-- Milestone 6: HSG Toán Huyện 8 -->
+          <div class="milestone-item reveal-fade-up">
+            <div class="milestone-card">
+              <span class="milestone-badge-top badge-district">📐 Niềm Đam Mê Sớm</span>
+              <h3 class="milestone-title">Khuyến Khích Học Sinh Giỏi Toán Cấp Huyện 8</h3>
+              <p class="milestone-desc">
+                Khởi đầu tình yêu và sự say mê toán học từ những năm tháng THCS qua kỳ thi học sinh giỏi cấp huyện.
+              </p>
+            </div>
+            <div class="milestone-node">✨</div>
+          </div>
+
+        </div>
+
+        <!-- Cheering Strawberry Kitten -->
+        <div class="achievements-companion-wrap reveal-fade-up">
+          <img src="assets/images/char_strawberry_cat.png" alt="Bé mèo dâu tây cổ vũ" class="cheering-cat" title="Nhấn vào tớ để nhận ngôi sao may mắn!">
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 0.5rem; font-weight: 600;">
+            Bé mèo Dâu chúc bạn luôn tỏa sáng trên con đường học tập! 🍓✨
+          </p>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 4: TEACHING EXPERIENCE
+         ========================================================================== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        
+        <div class="text-center reveal-fade-up">
+          <div class="story-chapter-tag">
+            <span class="chapter-icon">📚</span>
+            <span>Chương III • Hành Trình Đứng Lớp</span>
+          </div>
+          <h2 class="section-title">Kinh Nghiệm <span class="highlight">Giảng Dạy</span></h2>
+          <p class="section-subtitle">Từ thông tin chính xác trong CV: "Có kinh nghiệm dạy học sinh lớp 8, 10, 11".</p>
+        </div>
+
+        <div class="experience-grid">
+          
+          <!-- Class Card: Grade 8 -->
+          <div class="exp-class-card reveal-fade-up">
+            <div class="exp-card-header">
+              <span class="class-badge">Toán Lớp 8</span>
+              <span class="class-icon-tag">📐</span>
+            </div>
+            <h3>Củng Cố & Xây Nền Tảng</h3>
+            <p>
+              Giúp học sinh làm chủ các hằng đẳng thức đáng nhớ, phân tích đa thức thành nhân tử và các định lý hình học quan trọng, chuẩn bị đà tiến vào năm cuối cấp THCS.
+            </p>
+            <ul class="exp-bullet-list">
+              <li>Lấy lại gốc cho học sinh mất phương hướng</li>
+              <li>Rèn luyện tính cẩn thận trong trình bày hình học</li>
+              <li>Chuẩn bị kiến thức vững vàng trước thềm lớp 9</li>
+            </ul>
+          </div>
+
+          <!-- Class Card: Grade 10 -->
+          <div class="exp-class-card reveal-fade-up">
+            <div class="exp-card-header">
+              <span class="class-badge">Toán Lớp 10</span>
+              <span class="class-icon-tag">📊</span>
+            </div>
+            <h3>Thích Nghi Cấp THPT</h3>
+            <p>
+              Đồng hành cùng học sinh vượt qua rào cản khi bước vào lớp 10 với lượng kiến thức đại số và vector mới mẻ theo chương trình giáo dục phổ thông.
+            </p>
+            <ul class="exp-bullet-list">
+              <li>Nắm chắc các hàm số bậc hai, tam thức bậc hai</li>
+              <li>Phương pháp giải bài toán vector & tọa độ phẳng</li>
+              <li>Xây dựng thói quen tự giác và tư duy độc lập</li>
+            </ul>
+          </div>
+
+          <!-- Class Card: Grade 11 -->
+          <div class="exp-class-card reveal-fade-up">
+            <div class="exp-card-header">
+              <span class="class-badge">Toán Lớp 11</span>
+              <span class="class-icon-tag">📈</span>
+            </div>
+            <h3>Bứt Phá Điểm Số Nâng Cao</h3>
+            <p>
+              Chinh phục các chuyên đề trọng điểm như Lượng giác, Dãy số - Cấp số cộng/nhân, và Hình học không gian – phần kiến thức cốt lõi của kỳ thi tốt nghiệp.
+            </p>
+            <ul class="exp-bullet-list">
+              <li>Làm chủ phương pháp dựng hình và tính khoảng cách</li>
+              <li>Luyện đề định kỳ đánh giá sát năng lực học sinh</li>
+              <li>Chiến thuật phân bổ thời gian làm bài hiệu quả</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 5: TEACHING FORMAT & TARGET STUDENTS
+         ========================================================================== -->
+    <section id="format" class="format-section">
+      <div class="container">
+        
+        <div class="text-center reveal-fade-up">
+          <div class="story-chapter-tag">
+            <span class="chapter-icon">🎈</span>
+            <span>Chương IV • Hình Thức & Đối Tượng</span>
+          </div>
+          <h2 class="section-title">Lớp Học & <span class="highlight">Phương Thức</span></h2>
+          <p class="section-subtitle">Linh hoạt theo nhu cầu của từng gia đình và năng lực của từng học sinh.</p>
+        </div>
+
+        <div class="format-grid">
+          
+          <!-- Format: Online -->
+          <div class="format-card reveal-fade-up">
+            <div class="format-icon-large">💻</div>
+            <h3>Giảng Dạy Online</h3>
+            <p>
+              Học qua Google Meet / Zoom kết hợp bảng viết điện tử chuyên dụng (Graphics Tablet) cho phép viết vẽ trực quan như trên bảng phấn.
+            </p>
+            <div class="format-perks">
+              <div class="format-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Tiết kiệm thời gian di chuyển của học sinh</span>
+              </div>
+              <div class="format-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Gửi lại slide bài giảng và tóm tắt công thức sau mỗi buổi</span>
+              </div>
+              <div class="format-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Hỗ trợ giải đáp bài tập qua Zalo 24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format: Offline -->
+          <div class="format-card reveal-fade-up">
+            <div class="format-icon-large">🏡</div>
+            <h3>Giảng Dạy Offline</h3>
+            <p>
+              Dạy kèm trực tiếp tại nhà học sinh hoặc tại khu vực Khâm Thiên, quận Đống Đa và các khu vực lân cận tại Hà Nội.
+            </p>
+            <div class="format-perks">
+              <div class="format-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Tương tác trực tiếp 1-1, uốn nắn từng nét vẽ và cách trình bày</span>
+              </div>
+              <div class="format-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Theo dõi sát sao mức độ tập trung và tâm lý học tập</span>
+              </div>
+              <div class="format-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Trao đổi trực tiếp tình hình học tập với phụ huynh</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Target Students Banner from CV -->
+        <div class="target-students-banner reveal-fade-up">
+          <div class="target-icon-wrap">🎯</div>
+          <div class="target-content">
+            <h4>Đối Tượng Giảng Dạy Tiếp Nhận</h4>
+            <p>
+              Dành cho <strong>các bạn học sinh lớp 7, 8, 9, 10, 11</strong> có nhu cầu <strong>bổ sung kiến thức, lấy lại gốc</strong> hoặc muốn <strong>nâng cao trình độ học tập</strong> để đạt điểm số cao trong các kỳ thi giữa kỳ, cuối kỳ và chuyển cấp.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 6: SKILLS
+         ========================================================================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        
+        <div class="text-center reveal-fade-up">
+          <div class="story-chapter-tag">
+            <span class="chapter-icon">🪄</span>
+            <span>Chương V • Thế Mạnh & Kỹ Năng</span>
+          </div>
+          <h2 class="section-title">Kỹ Năng <span class="highlight">Sư Phạm</span></h2>
+          <p class="section-subtitle">Những phẩm chất và kỹ năng được rèn luyện để mang lại trải nghiệm học tập hiệu quả nhất cho học sinh.</p>
+        </div>
+
+        <!-- Floating Skill Orbs Grid -->
+        <div class="skills-bubble-grid">
+          
+          <!-- Skill 1 -->
+          <div class="skill-bubble-card reveal-fade-up">
+            <div class="skill-orb-visual">🗣️</div>
+            <div class="skill-card-text">
+              <h3>Truyền Đạt Tốt</h3>
+              <p>Biết cách biến những định lý, công thức trừu tượng thành các ví dụ sinh động, dễ hình dung và gần gũi với học sinh.</p>
+              <div class="skill-tags-row">
+                <span class="skill-pill">Rõ ràng</span>
+                <span class="skill-pill">Dễ hiểu</span>
+                <span class="skill-pill">Mạch lạc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-bubble-card reveal-fade-up">
+            <div class="skill-orb-visual">💖</div>
+            <div class="skill-card-text">
+              <h3>Kiên Nhẫn, Tận Tâm</h3>
+              <p>Sẵn sàng giảng lại nhiều lần với nhiều góc nhìn khác nhau cho đến khi học sinh thực sự hiểu rõ bản chất bài toán.</p>
+              <div class="skill-tags-row">
+                <span class="skill-pill">Không cáu gắt</span>
+                <span class="skill-pill">Chu đáo</span>
+                <span class="skill-pill">Luôn lắng nghe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-bubble-card reveal-fade-up">
+            <div class="skill-orb-visual">🤝</div>
+            <div class="skill-card-text">
+              <h3>Thấu Hiểu Tâm Lý Học Sinh & Phụ Huynh</h3>
+              <p>Nhận biết sự lo lắng, áp lực học đường của học sinh; giữ mối liên lạc chặt chẽ và thường xuyên cập nhật tiến độ cùng phụ huynh.</p>
+              <div class="skill-tags-row">
+                <span class="skill-pill">Đồng hành</span>
+                <span class="skill-pill">Tâm lý</span>
+                <span class="skill-pill">Khích lệ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill-bubble-card reveal-fade-up">
+            <div class="skill-orb-visual">🔄</div>
+            <div class="skill-card-text">
+              <h3>Linh Động Trong Kế Hoạch Giảng Dạy</h3>
+              <p>Không áp đặt một giáo án cứng nhắc; luôn tùy chỉnh tốc độ, khối lượng bài tập theo đúng năng lực và mục tiêu của từng em.</p>
+              <div class="skill-tags-row">
+                <span class="skill-pill">Cá nhân hóa</span>
+                <span class="skill-pill">Linh hoạt</span>
+                <span class="skill-pill">Sát mục tiêu</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Companion Banner with Floral Fawn -->
+        <div class="skills-companion-banner reveal-fade-up">
+          <img src="assets/images/char_floral_deer.png" alt="Bé hươu đội vòng hoa" class="fawn-companion-img" title="Bé hươu đồng hành">
+          <div style="background: rgba(255, 255, 255, 0.85); padding: 0.8rem 1.4rem; border-radius: 20px; border: 1px solid rgba(255, 183, 207, 0.5); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 0.95rem; font-weight: 600; color: var(--pink-600);">
+              "Mỗi học sinh là một mầm non độc đáo, cần được vun trồng bằng sự kiên nhẫn và tình yêu thương." 🌸
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 7: CONTACT / STORY CONCLUSION
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <div class="text-center reveal-fade-up">
+          <div class="story-chapter-tag">
+            <span class="chapter-icon">💌</span>
+            <span>Chương Cuối • Lời Nhắn Gửi Yêu Thương</span>
+          </div>
+          <h2 class="section-title">Kết Nối & <span class="highlight">Đăng Ký Học</span></h2>
+          <p class="section-subtitle">Quý phụ huynh và các em học sinh có thể liên hệ trực tiếp qua số điện thoại, Zalo, email hoặc để lại thông tin bên dưới.</p>
+        </div>
+
+        <div class="contact-storybook-box reveal-fade-up">
+          <div class="contact-grid">
+            
+            <!-- Left Info Panel -->
+            <div class="contact-info-panel">
+              <h3>Liên Hệ Trực Tiếp 🌸</h3>
+              <p class="intro">
+                Chị Ngọc luôn sẵn sàng lắng nghe nguyện vọng học tập của gia đình và sắp xếp lịch học thử phù hợp nhất!
+              </p>
+
+              <div class="contact-cards-stack">
+                
+                <!-- Phone -->
+                <a href="tel:0818132028" class="contact-method-card">
+                  <div class="contact-method-left">
+                    <div class="contact-icon-bubble">📞</div>
+                    <div class="contact-details">
+                      <span class="contact-detail-label">Số điện thoại / Zalo</span>
+                      <span class="contact-detail-value">0818 132 028</span>
+                    </div>
+                  </div>
+                  <button type="button" class="copy-badge-btn copy-phone-btn" title="Sao chép số điện thoại">Sao chép</button>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:phamngoc280627@gmail.com" class="contact-method-card">
+                  <div class="contact-method-left">
+                    <div class="contact-icon-bubble">✉️</div>
+                    <div class="contact-details">
+                      <span class="contact-detail-label">Email liên hệ</span>
+                      <span class="contact-detail-value">phamngoc280627@gmail.com</span>
+                    </div>
+                  </div>
+                  <button type="button" class="copy-badge-btn copy-email-btn" title="Sao chép email">Sao chép</button>
+                </a>
+
+                <!-- Address -->
+                <div class="contact-method-card" style="cursor: default;">
+                  <div class="contact-method-left">
+                    <div class="contact-icon-bubble">📍</div>
+                    <div class="contact-details">
+                      <span class="contact-detail-label">Địa chỉ hiện tại</span>
+                      <span class="contact-detail-value">Khâm Thiên, Đống Đa, Hà Nội</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- View CV Button -->
+              <div style="margin-top: 1.5rem;">
+                <button class="squishy-bubble bubble-primary open-cv-btn" style="width: 100%;" id="contact-cv-btn">
+                  <span>📄 Mở Hồ Sơ CV Đầy Đủ</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Consultation Form -->
+            <div class="contact-form-panel">
+              <h4>Gửi Lời Nhắn Tư Vấn 📝</h4>
+              <p class="form-subtitle">Điền thông tin ngắn để nhận lộ trình học tập phù hợp nhất nhé!</p>
+
+              <form id="consultation-form">
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-name" class="form-label">Họ và tên phụ huynh / học sinh *</label>
+                    <input type="text" id="form-name" class="form-input" placeholder="Ví dụ: Nguyễn Mai Anh" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="form-phone" class="form-label">Số điện thoại liên hệ *</label>
+                    <input type="tel" id="form-phone" class="form-input" placeholder="Ví dụ: 0987xxxxxx" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-grade" class="form-label">Học sinh lớp mấy? *</label>
+                    <select id="form-grade" class="form-select" required>
+                      <option value="" disabled selected>Chọn lớp học</option>
+                      <option value="Lớp 7">Lớp 7</option>
+                      <option value="Lớp 8">Lớp 8</option>
+                      <option value="Lớp 9">Lớp 9</option>
+                      <option value="Lớp 10">Lớp 10</option>
+                      <option value="Lớp 11">Lớp 11</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="form-type" class="form-label">Hình thức mong muốn</label>
+                    <select id="form-type" class="form-select">
+                      <option value="Offline tại nhà / Đống Đa">Offline (Tại nhà / Đống Đa)</option>
+                      <option value="Online qua Google Meet">Online qua Google Meet</option>
+                      <option value="Cần tư vấn thêm">Cần tư vấn thêm</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message" class="form-label">Nhu cầu hoặc tình hình học tập hiện tại</label>
+                  <textarea id="form-message" class="form-textarea" placeholder="Ví dụ: Con cần lấy lại gốc hình học, mục tiêu đạt 8+ thi học kỳ..."></textarea>
+                </div>
+
+                <button type="submit" class="squishy-bubble bubble-primary" style="width: 100%; padding: 0.95rem;">
+                  <span>Gửi Lời Nhắn Yêu Thương ✨</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+          <!-- Animal Friends Gathering -->
+          <div class="animal-party-row">
+            <img src="assets/images/char_mushroom_bunny.png" alt="Bé thỏ nấm" class="party-animal-img" title="Bé thỏ nấm vẫy tay">
+            <img src="assets/images/char_strawberry_cat.png" alt="Bé mèo dâu" class="party-animal-img" title="Bé mèo dâu mỉm cười">
+            <img src="assets/images/char_princess_kitten.png" alt="Bé mèo xanh" class="party-animal-img" title="Bé mèo công chúa">
+            <img src="assets/images/char_floral_deer.png" alt="Bé hươu hoa" class="party-animal-img" title="Bé hươu chúc mừng">
+          </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2026 Designed with <span class="heart">💖</span> for <strong>Phạm Thị Thanh Ngọc</strong> • Gia sư Toán tận tâm
+      </p>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem;">
+        Sinh viên Đại học Ngoại Thương (FTU) • Khâm Thiên, Đống Đa, Hà Nội
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CV LIGHTBOX MODAL (Requested)
+       ========================================================================== -->
+  <div id="cv-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cv-modal-heading">
+    <div class="modal-content-box">
+      
+      <div class="modal-header">
+        <h3 id="cv-modal-heading" class="modal-title">
+          <span>📄</span>
+          <span>Hồ Sơ Năng Lực (CV) • Phạm Thị Thanh Ngọc</span>
+        </h3>
+        <button id="close-cv-btn" class="modal-close-btn" aria-label="Đóng cửa sổ">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 0.95rem; color: var(--text-secondary); text-align: center;">
+          Bản gốc CV chính thức của Phạm Thị Thanh Ngọc - Gia sư môn Toán:
+        </p>
+        <img src="assets/images/cv_original.png" alt="CV Phạm Thị Thanh Ngọc" class="modal-cv-preview">
+      </div>
+
+      <div class="modal-footer">
+        <a href="assets/images/cv_original.png" download="CV_Pham_Thi_Thanh_Ngoc_Gia_Su_Toan.png" class="squishy-bubble bubble-primary" id="download-cv-btn">
+          <span>Tải Xuống Bản Đẹp 📥</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/canvas-effects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
