@@ -344,32 +344,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================
-  // 9. CONSULTATION CONTACT FORM
-  // ==========================================
-  const contactForm = document.getElementById('consultation-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('form-name')?.value || '';
-      const phone = document.getElementById('form-phone')?.value || '';
-      const grade = document.getElementById('form-grade')?.value || '';
-      const message = document.getElementById('form-message')?.value || '';
 
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const origText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<span>Đang gửi thư... 💌</span>';
-      submitBtn.disabled = true;
-
-      setTimeout(() => {
-        submitBtn.innerHTML = origText;
-        submitBtn.disabled = false;
-        contactForm.reset();
-        showToast(`💌 Cảm ơn bạn ${name}! Chị Ngọc đã nhận được lời nhắn và sẽ liên hệ sớm! ✨`);
-        if (typeof KawaiiAudio !== 'undefined') {
-          KawaiiAudio.playSuccessJingle();
-        }
-      }, 1200);
-    });
-  }
 });
