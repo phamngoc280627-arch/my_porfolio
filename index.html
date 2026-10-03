@@ -703,23 +703,23 @@
               <h4>Gửi Lời Nhắn Tư Vấn 📝</h4>
               <p class="form-subtitle">Điền thông tin ngắn để nhận lộ trình học tập phù hợp nhất nhé!</p>
 
-              <form id="consultation-form">
+             <form id="consultation-form" action="https://formspree.io/f/xbglnrvg" method="POST">
                 
                 <div class="form-row">
                   <div class="form-group">
                     <label for="form-name" class="form-label">Họ và tên phụ huynh / học sinh *</label>
-                    <input type="text" id="form-name" class="form-input" placeholder="Ví dụ: Nguyễn Mai Anh" required>
+                    <input type="text" id="form-name" name="name" class="form-input" placeholder="Ví dụ: Nguyễn Mai Anh" required>
                   </div>
                   <div class="form-group">
                     <label for="form-phone" class="form-label">Số điện thoại liên hệ *</label>
-                    <input type="tel" id="form-phone" class="form-input" placeholder="Ví dụ: 0987xxxxxx" required>
+                    <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="Ví dụ: 0987xxxxxx" required>
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group">
                     <label for="form-grade" class="form-label">Học sinh lớp mấy? *</label>
-                    <select id="form-grade" class="form-select" required>
+                    <select id="form-grade" name="grade" class="form-select" required>
                       <option value="" disabled selected>Chọn lớp học</option>
                       <option value="Lớp 7">Lớp 7</option>
                       <option value="Lớp 8">Lớp 8</option>
@@ -730,7 +730,7 @@
                   </div>
                   <div class="form-group">
                     <label for="form-type" class="form-label">Hình thức mong muốn</label>
-                    <select id="form-type" class="form-select">
+                    <select id="form-type" name= "learning_type" class="form-select">
                       <option value="Offline tại nhà / Đống Đa">Offline (Tại nhà / Đống Đa)</option>
                       <option value="Online qua Google Meet">Online qua Google Meet</option>
                       <option value="Cần tư vấn thêm">Cần tư vấn thêm</option>
@@ -740,7 +740,7 @@
 
                 <div class="form-group">
                   <label for="form-message" class="form-label">Nhu cầu hoặc tình hình học tập hiện tại</label>
-                  <textarea id="form-message" class="form-textarea" placeholder="Ví dụ: Con cần lấy lại gốc hình học, mục tiêu đạt 8+ thi học kỳ..."></textarea>
+                  <textarea id="form-message" name="message" class="form-textarea" placeholder="Ví dụ: Con cần lấy lại gốc hình học, mục tiêu đạt 8+ thi học kỳ..."></textarea>
                 </div>
 
                 <button type="submit" class="squishy-bubble bubble-primary" style="width: 100%; padding: 0.95rem;">
